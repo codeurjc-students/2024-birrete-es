@@ -11,6 +11,7 @@ import './Myfooter.css';
 import Appstore from '../../static-images/images-footer/appstore.png';
 import Button from '@mui/material/Button';
 import GooglePlay from '../../static-images/images-footer/googleplay.png';
+import { Link } from 'react-router-dom';
 
 
 const MyFooter = () => {
@@ -19,31 +20,27 @@ const MyFooter = () => {
       <Grid sx={{backgroundColor: "blue"}} size={3}>
         <Typography component="h6" className='footer-titles'>Nuestra empresa</Typography>
         <ul>
-            <li><a href='#'>Quiénes somos</a></li>
-            <li><a href='#'>Blog</a></li>
-            <li><a href='#'>Teléfonos de contacto</a></li>
-            <li><a href='#'>¿Cómo funciona nuestra Web?</a></li>
-            <li><a href='#'>Empleo</a></li>
+            <li><Link to="/quienessomos">Quiénes somos</Link></li>
+            <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/phonecontact">Teléfonos de contacto</Link></li>
+            <li><Link to="/comofuncionaweb">¿Cómo funciona nuestra Web?</Link></li>
+            <li><Link to="/empleo">Empleo</Link></li>            
         </ul>
       </Grid>
       <Grid sx={{backgroundColor: "blue"}} size={3}>
       <Typography component="h6" className='footer-titles'>Contactar</Typography>
       <ul>
-            <li><a href='#'>Ayuda/Preguntas frecuentes</a></li>
-            <li><a href='#'>Anúnciate con nosotros</a></li>
-            <li><a href='#'>Contactar con un agente</a></li>
-            <li><a href='#'>Te llamamos</a></li>
-            <li><a href='#'></a></li>
+            <li><Link to="/ayudapreguntasfrecuentes">Ayuda/Preguntas frecuentes</Link></li>
+            <li><Link to="/anunciateconnosotros">Anúnciate con nosotros</Link></li>
+            <li><Link to="/contactarconagente">Contactar con un agente</Link></li>
+            <li><Link to="/tellamamos">Te llamamos</Link></li>         
         </ul>
       </Grid>
       <Grid size={3}>
       <Typography component="h6" className='footer-titles'>Más</Typography>
       <ul>
-            <li><a href='#'>Nuestros Servicios</a></li>
-            <li><a href='#'>Nuestros precios</a></li>
-            <li><a href='#'></a></li>
-            <li><a href='#'></a></li>
-            <li><a href='#'></a></li>
+            <li><Link to="/nuestrosservicios">Nuestros Servicios</Link></li>
+            <li><Link to="/nuestrosprecios">Nuestros Precios</Link></li>
         </ul>
       </Grid>
       <Grid size={3}>
