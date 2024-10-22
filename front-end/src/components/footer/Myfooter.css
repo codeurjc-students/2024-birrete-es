@@ -1,0 +1,14 @@
+li {
+    list-style: none;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+a {
+    text-decoration: none;
+}
+
+.footer-titles {    
+    text-align: justify;
+    font-size: 0.9em;   
+    font-weight: bold; 
+}

@@ -7,18 +7,17 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import XIcon from '@mui/icons-material/X';
 import Grid from '@mui/material/Grid2';
+import './Myfooter.css';
+import Appstore from '../../static-images/images-footer/appstore.png';
+import Button from '@mui/material/Button';
+import GooglePlay from '../../static-images/images-footer/googleplay.png';
 
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-
-import ListItemText from '@mui/material/ListItemText';
 
 const MyFooter = () => {
   return (
     <>      
       <Grid sx={{backgroundColor: "blue"}} size={3}>
-        <Typography component="h6">Nuestra empresa</Typography>
+        <Typography component="h6" className='footer-titles'>Nuestra empresa</Typography>
         <ul>
             <li><a href='#'>Quiénes somos</a></li>
             <li><a href='#'>Blog</a></li>
@@ -28,7 +27,7 @@ const MyFooter = () => {
         </ul>
       </Grid>
       <Grid sx={{backgroundColor: "blue"}} size={3}>
-      <Typography component="h6">Contactar</Typography>
+      <Typography component="h6" className='footer-titles'>Contactar</Typography>
       <ul>
             <li><a href='#'>Ayuda/Preguntas frecuentes</a></li>
             <li><a href='#'>Anúnciate con nosotros</a></li>
@@ -38,7 +37,7 @@ const MyFooter = () => {
         </ul>
       </Grid>
       <Grid size={3}>
-      <Typography component="h6">Más</Typography>
+      <Typography component="h6" className='footer-titles'>Más</Typography>
       <ul>
             <li><a href='#'>Nuestros Servicios</a></li>
             <li><a href='#'>Nuestros precios</a></li>
@@ -48,18 +47,20 @@ const MyFooter = () => {
         </ul>
       </Grid>
       <Grid size={3}>
-      <Typography component="h6">Descarga la app de Birrete-es</Typography>
-      <ul>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
-            <li><a></a></li>
+      <Typography component="h6" className='footer-titles'>Descarga la app de Birrete-es</Typography>
+      <ul>            
+            <li><Button variant="outlined">
+                  <img src={GooglePlay} style={{height: '40px'}} />                  
+                </Button></li>
+            <li>
+              <Button variant="outlined">
+                 <img src={Appstore} style={{height: '40px' }} />
+              </Button></li>
         </ul>
       </Grid>
       <Grid size={12} sx={{borderTop: 1, padding: 0}}>                
           <Toolbar sx={{background: "red", justifyContent: "center"}} >
-              <Typography sx={{color:"white"}}>
+              <Typography sx={{color:"white", fontSize: "0.8em"}}>
                   Ulises Huamán &#169; Todos los derechos reservados
               </Typography>
               <IconButton>
