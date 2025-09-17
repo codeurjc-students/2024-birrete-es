@@ -1,1 +1,2 @@
 # 2024-birrete-es
+## Es un proyecto de una aplicación web que registra profesionales y muestra los profesionales a los posibles clientes de acuerdo a lugar geográfico dónde desean contratar sus servicio.
