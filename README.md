@@ -52,7 +52,7 @@ Se implementarán las funcionalidades esenciales:
 - Registro de usuarios
 - Creación de perfiles profesionales
 - Geolocalización básica
-- Contenedorización del backend con Docker
+- Empaquetado en Docker
 Release 0.1: Versión funcional mínima
 ### *Fase 4:* Versión 0.2 – Funcionalidad intermedia
 Fechas: 15 de diciembre de 2025 al 1 de marzo de 2026
@@ -329,8 +329,7 @@ Rol con control total del sistema.
 - Formik + Yup: Validación de formularios en React Native.
 **Métricas y monitoreo**
 - Grafana + Prometheus: Monitoreo del backend y rendimiento.
-- Google Analytics: Seguimiento del comportamiento de usuarios.
-- 
+- Google Analytics: Seguimiento del comportamiento de usuarios.  
 ### 7. Algoritmo de consulta avanzado
 **Geo-Spatial Filtering + Weighted Scoring.** Combina filtros geoespaciales con un sistema de puntuación ponderada para ordenar los resultados de búsqueda de profesionales según relevancia, cercanía, disponibilidad y reputación.
 
