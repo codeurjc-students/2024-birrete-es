@@ -111,7 +111,8 @@ Se realizará la presentación final ante jurado o comité evaluador:
 
 ## Diagrama Gantt
 
-<img width="696" height="431" alt="image" src="https://github.com/user-attachments/assets/c568a2ab-3ee8-48ad-8d5f-fd799c2a2e02" />
+<img width="781" height="284" alt="image" src="https://github.com/user-attachments/assets/3d66d53e-db0f-431d-8c61-a529ad380add" />
+
 
 
 ## Funcionalidades detalladas
