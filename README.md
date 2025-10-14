@@ -33,48 +33,79 @@ Desde el punto de vista tecnológico, Birrete-es se desarrollará utilizando Rea
 ### Enfoque general
 El desarrollo de Birrete-ES se llevará a cabo mediante una metodología iterativa e incremental, que permite construir la aplicación en ciclos cortos, con entregas funcionales al final de cada fase. Este enfoque facilita la validación continua, la mejora progresiva y la adaptación a cambios durante el proceso. Se aplicarán buenas prácticas de ingeniería de software, control de calidad periódico y documentación técnica.
 ### Fases del proyecto
-### *Fase 1:* Definición de funcionalidades y pantallas
-Fechas: 1 al 15 de septiembre de 2025
+- [Fase 1: Definicion de funcionalidades y pantallas](#fase-1-definicion-de-funcionalidades-y-pantallas)
+- [Fase 2: Configuracion del repositorio pruebas y CI](#fase-2-configuracion-del-repositorio-pruebas-y-ci)
+- [Fase 3: Version 01 – funcionalidad basica y Docker](#fase-3-version-01--funcionalidad-basica-y-docker)
+- [Fase 4: Version 02 – funcionalidad intermedia](#fase-4-version-02--funcionalidad-intermedia)
+- [Fase 5: Version 10 – funcionalidad avanzada](#fase-5-version-10--funcionalidad-avanzada)
+- [Fase 6: Escritura de la memoria](#fase-6-escritura-de-la-memoria)
+- [Fase 7: Defensa del proyecto](#fase-7-defensa-del-proyecto)
+  
+### Fase 1: Definicion de funcionalidades y pantallas
+**Fechas: 1 al 15 de septiembre de 2025** 
+
 Se establecerán los objetivos funcionales y técnicos del proyecto, junto con el diseño de las pantallas principales de la aplicación.
 Secciones clave:
+
 - “Objetivos funcionales”
 - “Funcionalidades clave”
 - “Objetivos técnicos”
 - “Aspectos técnicos clave”
 - Bocetos y estructura de navegación
-### *Fase 2:* Configuración del repositorio, pruebas y CI
-Fechas: 15 de septiembre al 15 de octubre de 2025
-Se configurarán las tecnologías principales: React Native, Spring Boot, PostgreSQL, y el repositorio en GitHub.
-Se establecerán pruebas automatizadas (Jest, JUnit) y flujos de integración continua (CI) con GitHub Actions para validar cada commit y mantener la calidad del código.
-### *Fase 3:* Versión 0.1 – Funcionalidad básica y Docker
-Fechas: 15 de octubre al 15 de diciembre de 2025
-Se implementarán las funcionalidades esenciales:
+  
+### Fase 2: Configuracion del repositorio pruebas y CI
+**Fechas: 15 de septiembre al 15 de octubre de 2025**
+
+Se configurarán las tecnologías principales:
+
+- React Native
+- Spring Boot
+- PostgreSQL
+- Repositorio en GitHub  
+- Se establecerán pruebas automatizadas (Jest, JUnit)
+- Flujos de integración continua (CI) con GitHub Actions para validar cada commit y mantener la calidad del código.
+  
+### Fase 3: Version 01 – funcionalidad basica y Docker
+**Fechas: 15 de octubre al 15 de diciembre de 2025**
+
+**Release 0.1: Versión funcional mínima**
+
+Se implementarán las funcionalidades esenciales: 
 - Registro de usuarios
 - Creación de perfiles profesionales
 - Geolocalización básica
 - Empaquetado en Docker
-Release 0.1: Versión funcional mínima
-### *Fase 4:* Versión 0.2 – Funcionalidad intermedia
-Fechas: 15 de diciembre de 2025 al 1 de marzo de 2026
+
+### Fase 4: Version 02 – funcionalidad intermedia
+**Fechas: 15 de diciembre de 2025 al 1 de marzo de 2026**
+
+**Release 0.2: Versión ampliada**
+
 Se añadirán funcionalidades avanzadas:
 - Búsqueda y filtrado por especialidad y ubicación
 - Contacto directo entre usuarios y profesionales
 - Roles de usuario
-Release 0.2: Versión ampliada
-### *Fase 5:* Versión 1.0 – Funcionalidad avanzada
-Fechas: 1 de marzo al 15 de abril de 2026
+
+### Fase 5: Version 10 – funcionalidad avanzada
+**Fechas: 1 de marzo al 15 de abril de 2026**
+
+**Release 1.0: Versión final para presentación.**
+
 Se optimizará la app, se reforzará la seguridad, se realizarán pruebas de rendimiento y se ajustará la interfaz.
-Release 1.0: Versión final para presentación
-### *Fase 6:* Escritura de la memoria
-Fechas: 15 de abril al 15 de mayo de 2026
+
+### Fase 6: Escritura de la memoria
+**Fechas: 15 de abril al 15 de mayo de 2026.**
+
 Se redactará la documentación técnica y funcional del proyecto, incluyendo arquitectura, decisiones de diseño, pruebas realizadas y resultados.
-### *Fase 7:* Defensa del proyecto
-Fecha: 15 de junio de 2026
+### Fase 7: Defensa del proyecto
+**Fecha: 15 de junio de 2026.**
+
 Se realizará la presentación final ante jurado o comité evaluador:
 - Diapositivas
 - Demo funcional
 - Resumen ejecutivo
 - Argumentario para exposición oral
+  
 ## A continuación de muestra una tabla con las etapas definidas anteriormente, de manera resumida.
 <img width="702" height="379" alt="image" src="https://github.com/user-attachments/assets/5c77b8ed-6975-45bf-9c8a-d81f95490a45" />
 
