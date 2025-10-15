@@ -116,82 +116,97 @@ Se realizará la presentación final ante jurado o comité evaluador:
 
 
 ## Funcionalidades detalladas
+### Funcionalidades básicas
+|  Nivel           | Usuario objetivo     |  Descripción                                 |
+|------------------|----------------------|----------------------------------------------|  
+| Registro y login | Cliente /Profesional |  Autenticación básica con email y contraseña |
+| Perfil público del profesional  | Cliente |  Visualización de nombre, especialidad, ubicación y contacto |
+| Registro de profesional  | Profesional |  Formulario para crear perfil con datos básicos y categoría profesional |
+| Búsqueda por categoría y ubicación  | Cliente |  Filtro por tipo de servicio y zona geográfica |
+| Visualización de resultados  | Cliente |  Lista de profesionales con paginación o botón “Más” |
+| Diseño responsive multiplataforma  | Todos |  Interfaz adaptable para Android, iOS y Web |
+
+### Funcionalidades intermedias.
+|  Nivel           | Usuario objetivo     |  Descripción                                 |
+|------------------|----------------------|----------------------------------------------|  
+| Valoraciones y comentarios | Cliente |  Sistema de puntuación y reseñas para profesionales |
+| Panel de control del profesional  | Profesional |  Vista para editar perfil, ver estadísticas y gestionar reseñas |
+| Geolocalización activa  | Cliente |  Mostrar profesionales cercanos según ubicación actual |
+| Recomendaciones entre clientes  | Cliente |  Compartir perfiles con otros usuarios mediante enlace o botón |
+| Notificaciones básica  | Cliente / Profesional |  Avisos por nuevas reseñas o solicitudes |
+| Validación de datos del profesional  | Profesional / Admin |  Verificación manual o automática de credenciales |
+
+### Funcionalidades avanzadas.
+|  Nivel           | Usuario objetivo     |  Descripción                                 |
+|------------------|----------------------|----------------------------------------------|  
+| Chat interno seguro | Cliente / Profesional |  Comunicación directa sin compartir datos personales |
+| Agenda y reservas  | Cliente / Profesional |  Solicitud de citas, disponibilidad y confirmacione |
+| Sistema de reputación acumulada  | Profesional |  Métrica compuesta por reseñas, actividad y recomendaciones |
+| Algoritmo de recomendación personalizado  | Cliente |  Sugerencias basadas en búsquedas previas y ubicación |
+| Integración con redes sociales  | Profesional |  Compartir perfil en LinkedIn, Instagram, etc. |
+| Panel administrativo para moderación  | Admin |  Gestión de usuarios, contenido y validaciones |
+
+## Análisis
 ### 1. Pantallas y Navegación
 ![Diagrama-navegación](https://github.com/user-attachments/assets/c20a9a4e-60ee-40ff-a346-098d08bb32c9)
 
 ### 2. Entidades
+
+|  Entidad           | Atributos principales     |  
+|------------------|----------------------|  
+| Usuario | id_usuario, nombre, email, contraseña, rol (cliente/profesional/admin) |
+| Profesional | id_profesional, id_usuario, especialidad, descripción, ubicación, validado |
+| Cliente | id_cliente, id_usuario |
+| Perfil  | id_perfil, id_profesional, foto, redes_sociales, disponibilida |
+| Ubicación  | id_ubicación, ciudad, provincia, coordenadas |
+| Valoración  | id_valoración, id_cliente, id_profesional, puntuación, comentario, fecha |
+| Recomendación  | id_recomendación, id_cliente_origen, id_cliente_destino, id_profesional, fecha |
+| Reserva  | id_reserva, id_cliente, id_profesional, fecha_hora, estado |
+| Chat  | id_chat, id_cliente, id_profesional, mensaje, timestamp |
+| Notificación  | id_notificación, id_usuario, tipo, mensaje, leída  |
+| Administrador  | id_admin, id_usuario  |
+| Historial  | id_historial, id_cliente, id_profesional, tipo_interacción, fecha  |
+
+
+
+
+### Descripción
 **1. Usuario.**
-Entidad base que representa a cualquier persona que interactúa con la aplicación.
-Atributos comunes: id, nombre, rol
-Roles derivados:
-- Usuario invitado
-- Usuario registrado
-- Usuario profesional
-- Empresa
-- Administrador
+Entidad base que representa a cualquier persona que interactúa con la aplicación. Puede tener distintos roles (cliente, profesional, administrador). 
 
-**2. UsuarioInvitado.**
-Persona que accede sin registrarse.
-Permisos:
-- Visualizar perfiles públicos de profesionales
-- Buscar por ubicación y categoría
-- No puede contactar ni guardar favoritos
+**2. Profesional.**
+Representa a un usuario que ofrece servicios dentro de la aplicación. Extiende al usuario con información específica sobre su actividad profesional incluyendo validación y ubicación.
 
-**3. UsuarioRegistrado.**
-Cliente con cuenta activa.
-Atributos adicionales: teléfono, dirección, ubicación, username, password
-Permisos:
-- Guardar favoritos
-- Contactar profesionales
-- Valorar servicios
-- Acceder a funcionalidades completas
+**3. Cliente.**
+Usuario que busca y contrata servicios de profesionales. Telación directa con la entidad Usuario, representa a quienes interactúan como consumidores de servicios.
 
-**4. Profesional.**
-Persona que ofrece servicios.
-Atributos:
-- id, nombre, teléfono, dirección, ubicación, especialidades, disponibilidad, likes, stars, comments, clientes
-Permisos:
-- Crear y editar perfil
-- Recibir mensajes
-- Ver estadísticas
-- Actualizar datos
+**4. Perfil.**
+Información pública del profesional visible para los clientes. Contiene los elementos visuales y de contacto que conforman la presentación del profesional en la app.
 
-**5. UsuarioProfesional.**
-Extiende la entidad Profesional con funcionalidades específicas para usuarios que gestionan su propio perfil.
-Permisos adicionales:
-- Crear perfil
-- Editar perfil
-- Ver estadísticas de interacción
+**5. Ubicación**
+Zona geográfica asociada a preofesionales y clientes. Permite filtrar y localizar profesionales según su área de actividad.
 
-**6. Empresa.**
-Entidad que representa a una organización que agrupa varios profesionales.
-Atributos: id, nombre, profesionales[]
-Permisos:
-- Gestionar perfiles de empleados
-- Ver métricas agrupadas
-- Publicar servicios destacados
+**6. Valoración.**
+Opinión que un cliente deja sobre un profesional. Refleja la caliad del servicio recibido mediante puntuaciones y comentarios.
 
-**7. Administrador.**
-Usuario con privilegios totales sobre el sistema.
-Atributos: id, nombre, teléfono, username, password
-Permisos:
-- Gestionar usuarios y roles
-- Moderar contenido
-- Configurar parámetros del sistema
-- Supervisar seguridad y rendimiento
+**7. Recomendación.**
+Acción de compartir un profesional entre clientes. Facilita el posicionamiento de perfiles profesionales mediante recomendación de los usuarios.
 
-**8. RolUsuario (Enumeración).**
-Define los tipos de usuario en el sistema:
-- INVITADO
-- REGISTRADO
-- PROFESIONAL
-- EMPRESA
-- ADMINISTRADOR
-- 
+**8. Reserva.**
+Solicitud de cita entre cliente y profesional. Registra la interación de contratar un servicio en una fecha específica, con seguimiento de estado.
 ### Diagrama UML
-
+#### Datos.
+- Usuario se relaciona 1 a 1 con Cliente, Profesional y Administrador (según rol).
+- Profesional tiene 1 a 1 con Perfil.
+- Profesional pertenece a una Ubicación y a una Categoría.
+- Cliente puede hacer muchas Valoraciones a muchos Profesionales.
+- Cliente puede hacer muchas Recomendaciones a otros clientes.
+- Cliente puede hacer muchas Reservas con muchos Profesionales.
+- Cliente y Profesional pueden intercambiar muchos Chats.
+- Usuario puede recibir muchas Notificaciones.
+- Historial registra interacciones entre Cliente y Profesional.
+- 
 <img width="748" height="625" alt="image" src="https://github.com/user-attachments/assets/cdaa9ff8-5a7f-4e20-98cd-5860710a5d1b" />
-
 
 ### 3. Permisos de usuarios
 #### Usuario invitado
