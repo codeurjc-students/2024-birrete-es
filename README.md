@@ -148,7 +148,9 @@ Se realizará la presentación final ante jurado o comité evaluador:
 
 ## Análisis
 ### 1. Pantallas y Navegación
-![Diagrama-navegación](https://github.com/user-attachments/assets/c20a9a4e-60ee-40ff-a346-098d08bb32c9)
+
+<img width="4195" height="4067" alt="digrama 1" src="https://github.com/user-attachments/assets/4715a059-8283-4ced-a677-1f6a1c50b3cf" />
+
 
 ### 2. Entidades
 
@@ -205,8 +207,8 @@ Solicitud de cita entre cliente y profesional. Registra la interación de contra
 - Cliente y Profesional pueden intercambiar muchos Chats.
 - Usuario puede recibir muchas Notificaciones.
 - Historial registra interacciones entre Cliente y Profesional.
-- 
-<img width="748" height="625" alt="image" src="https://github.com/user-attachments/assets/cdaa9ff8-5a7f-4e20-98cd-5860710a5d1b" />
+    
+<img width="2080" height="1313" alt="diagrama_uml" src="https://github.com/user-attachments/assets/fdc410ac-4dce-406d-824f-fe3173da8055" />
 
 ### 3. Permisos de usuarios
 #### Usuario invitado
